@@ -9,7 +9,7 @@ import { FirebaseAuthClient } from './authClient';
 
 const API_ENDPOINT_URI = 'https://api.8base.com/ck1auj5kk00k101mqdfu55sg2';
 
-var firebaseConfig = {
+var FIREBASE_CONFIGURATION = {
   apiKey: "",
   authDomain: "",
   databaseURL: "",
@@ -19,7 +19,7 @@ var firebaseConfig = {
   appId: ""
 };
 
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(FIREBASE_CONFIGURATION);
 
 const authClient = new FirebaseAuthClient(firebase);
 const decoratedAuthClient = SubscribableDecorator.decorate(authClient);

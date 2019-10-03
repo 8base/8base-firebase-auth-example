@@ -1,0 +1,17 @@
+.build
+.DS_Store
+.env
+.env.test
+.eslintcache
+.idea
+.vscode
+build
+coverage
+dist
+es
+lib
+node_modules
+npm-debug.log
+package-lock.json
+yarn-error.log
+yerna.log

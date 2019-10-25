@@ -16,16 +16,16 @@
     "@8base-react/table-schema-provider" "^1.0.0"
     "@8base-react/utils" "^1.0.0"
 
-"8base-sdk@^1.0.0":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/8base-sdk/-/8base-sdk-1.0.1.tgz#60ad6e626275fe493fcc243a9915fe342966b78e"
-  integrity sha512-qHPUDzkQhu5cX3y9cdxuNWkMamonBHWw0Tz3OaprbUbyA/k4N6n3dotl53zYdZafF9m0bbrs4SVkf4nNNVjKHQ==
+"8base-sdk@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/8base-sdk/-/8base-sdk-1.1.0.tgz#c2dc60b21a5ef8e78bc70b13c9845dab6b273167"
+  integrity sha512-BKAOxrmsJI2UZckmJRLOKqbn2IkLbGg3XPdWWpE4+RtVAP/6PTarvsNEEitfWDSD4iqxd8xdnIDOjflzq1ShrA==
   dependencies:
-    "@8base/apollo-client" "^1.0.1"
-    "@8base/apollo-links" "^1.0.1"
-    "@8base/auth" "^1.0.1"
-    "@8base/utils" "^1.0.1"
-    "@8base/validate" "^1.0.1"
+    "@8base/apollo-client" "^1.1.0"
+    "@8base/apollo-links" "^1.1.0"
+    "@8base/auth" "^1.1.0"
+    "@8base/utils" "^1.1.0"
+    "@8base/validate" "^1.1.0"
 
 "@8base-react/app-provider@^1.0.0":
   version "1.0.0"
@@ -119,13 +119,34 @@
   dependencies:
     "@8base/utils" "^1.0.1"
 
-"@8base/apollo-client@^1.0.0", "@8base/apollo-client@^1.0.1":
+"@8base/api-token-auth-client@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@8base/api-token-auth-client/-/api-token-auth-client-1.1.0.tgz#adc64c3ba3a062ba4911091a80f6d420b1d932f1"
+  integrity sha512-aZTTuDiikylG6e1cfMVg4xOxrdpkKwY4fYq8rXePhrFI+q8WiINDgmcXNag6dPBmU9UYOChk8GmPuwfdBkWO8w==
+  dependencies:
+    "@8base/utils" "^1.1.0"
+
+"@8base/apollo-client@^1.0.0":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@8base/apollo-client/-/apollo-client-1.0.1.tgz#81dc146b742e94854f99a221c4013af89c8ebfe4"
   integrity sha512-yfT2IoJ1mrqau/WggX8XECYKa/RPi/l85iZ4WVv3kXcLcyNq7AzyA8CbmYQhhTXx5UODAspgiDpyqg032/dPYg==
   dependencies:
     "@8base/apollo-links" "^1.0.1"
     "@8base/utils" "^1.0.1"
+    apollo-cache-inmemory "^1.5.1"
+    apollo-link "1.2.11"
+    apollo-link-batch-http "^1.2.11"
+    apollo-link-error "^1.1.10"
+    apollo-utilities "^1.3.2"
+    graphql-tag "^2.10.0"
+
+"@8base/apollo-client@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@8base/apollo-client/-/apollo-client-1.1.0.tgz#b2bcbfc09d563a76457f5973c5f8960ab3e501e4"
+  integrity sha512-zB2yjbb5Y1A6O5KzH9lzLQjXCTgfUYlK8lU45/giaC24OBDKl1fk7mIn21/HuR8VkSU2Y4HX43YmE6DE6FHoRQ==
+  dependencies:
+    "@8base/apollo-links" "^1.1.0"
+    "@8base/utils" "^1.1.0"
     apollo-cache-inmemory "^1.5.1"
     apollo-link "1.2.11"
     apollo-link-batch-http "^1.2.11"
@@ -156,7 +177,22 @@
     ramda "^0.26.1"
     zen-observable-ts "^0.8.18"
 
-"@8base/auth@^1.0.0", "@8base/auth@^1.0.1":
+"@8base/apollo-links@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@8base/apollo-links/-/apollo-links-1.1.0.tgz#e0f4479610703f63b91e6f33330438335c18295c"
+  integrity sha512-OcWm7E0QgQS2pcat66SuxhIf+NC+2htpp/KknL1bTM1frh/UTZKA1w6h2sdVOdlC/t7wD+anoLwJxwNDgGkwDA==
+  dependencies:
+    "@8base/apollo-link-ws" "1.0.20"
+    "@8base/error-codes" "^1.0.17"
+    "@8base/subscriptions-transport-ws" "^0.9.16"
+    "@8base/utils" "^1.1.0"
+    apollo-link "1.2.11"
+    apollo-link-error "^1.1.10"
+    graphql-tag "^2.9.2"
+    ramda "^0.26.1"
+    zen-observable-ts "^0.8.18"
+
+"@8base/auth@^1.0.0":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@8base/auth/-/auth-1.0.1.tgz#4cd6729df1a2d256b95ef67a72259fb737d02a38"
   integrity sha512-wy6spb1xHre9ewF4XIT+JfYATD+gI1I6x7uKaHF1QMooq8bkDQlwWAeudLL9upsFfgfYB/0m+vYENd3n985dxw==
@@ -164,6 +200,16 @@
     "@8base/api-token-auth-client" "^1.0.1"
     "@8base/utils" "^1.0.1"
     "@8base/web-auth0-auth-client" "^1.0.1"
+    ramda "^0.26.1"
+
+"@8base/auth@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@8base/auth/-/auth-1.1.0.tgz#dbffb9e1022dc17f9c48f2bbb3e8899d2f6105b8"
+  integrity sha512-H345xowme0YwiI4TIXJkIvIUofFBXVG642tzikHkEFvQsozOEpPmXk+/LWie6Cya6h5rYteQvVK2DQtLrYtKmA==
+  dependencies:
+    "@8base/api-token-auth-client" "^1.1.0"
+    "@8base/utils" "^1.1.0"
+    "@8base/web-auth0-auth-client" "^1.1.0"
     ramda "^0.26.1"
 
 "@8base/error-codes@^1.0.17":
@@ -203,12 +249,34 @@
     ramda "^0.26.1"
     reselect "^4.0.0"
 
-"@8base/validate@^1.0.0", "@8base/validate@^1.0.1":
+"@8base/utils@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@8base/utils/-/utils-1.1.0.tgz#a334169bd3f33eb64c81700a93728dbdceefd290"
+  integrity sha512-AYGF3/ZDGiUZ/wGu0UvFgfwb2hjG4R+OSdBkdd8a/4UuRc77KxGr0lXUctGzbAs8HrVBknFrk9zeO7dbC8w97g==
+  dependencies:
+    "@8base/error-codes" "^1.0.17"
+    "@8base/schema-name-generator" "^0.1.5"
+    graphql-prettier "^1.0.5"
+    os "^0.1.1"
+    prettier "^1.17.0"
+    ramda "^0.26.1"
+    reselect "^4.0.0"
+
+"@8base/validate@^1.0.0":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@8base/validate/-/validate-1.0.1.tgz#8665d470df97ab41e7270a9df42d4147f859de6e"
   integrity sha512-5F86H0Luy7C6b2AVmGYrHfXBOj9ahQXU/93w9cSQtw/ixVS7y3FZ7srJ7/finnvu963WcDXkK678oxovb4fzXg==
   dependencies:
     "@8base/utils" "^1.0.1"
+    decimal.js "^10.1.1"
+    ramda "^0.26.1"
+
+"@8base/validate@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@8base/validate/-/validate-1.1.0.tgz#da984558d651c7d30a268d076ea8c6e300eab1e6"
+  integrity sha512-QjfW831rFHOPYBw+b5ZNNvkLVBcTwLjbivbWWMnptq5ueZ4jox/ppJmUZ3lmVLiNt4reFBRCDtXOo0lKKfEjbg==
+  dependencies:
+    "@8base/utils" "^1.1.0"
     decimal.js "^10.1.1"
     ramda "^0.26.1"
 
@@ -218,6 +286,15 @@
   integrity sha512-VsWbVsTwxyneuRnQb8YAcHac06NSxsilEEcHlTZv6MRdhmqgX5jPcPYlr4nojq4j/Ep3V6TTWme0oAde2NStNw==
   dependencies:
     "@8base/utils" "^1.0.1"
+    auth0-js "^9.11.1"
+    ramda "^0.26.1"
+
+"@8base/web-auth0-auth-client@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@8base/web-auth0-auth-client/-/web-auth0-auth-client-1.1.0.tgz#2d6f7fb1de30664e6653befb1d666b8130446a7e"
+  integrity sha512-JHLOOoDsigYAiJ91UAEekXiegXlT+LzfkEjxmGst18Gvq7GOYM6TOSpynVjMR6nLvlRV+lVLDQs/dOnggsv0aw==
+  dependencies:
+    "@8base/utils" "^1.1.0"
     auth0-js "^9.11.1"
     ramda "^0.26.1"
 

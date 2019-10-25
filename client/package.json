@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "8base-react-sdk": "^1.0.0",
-    "8base-sdk": "^1.0.0",
+    "8base-sdk": "^1.1.0",
     "apollo-client": "^2.6.3",
     "firebase": "^7.0.0",
     "graphql": "^14.3.1",

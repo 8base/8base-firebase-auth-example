@@ -1,8 +1,8 @@
 import React from 'react';
 import { AppProvider } from '8base-react-sdk';
+import { Auth, AUTH_STRATEGIES } from '8base-sdk';
 import { BrowserRouter } from 'react-router-dom';
 import firebase from 'firebase';
-import { Auth, AUTH_STRATEGIES } from '@8base/auth';
 
 import { Routes } from './routes';
 

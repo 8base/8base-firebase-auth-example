@@ -20,7 +20,7 @@ export const Protected = () => (
 
       return (
         <div>
-          Protected route, your email: {data && data.user && data.user.email}!
+          Protected route, your email: {data.user.email}!
         </div>
       );
     } }

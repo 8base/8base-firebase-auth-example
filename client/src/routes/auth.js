@@ -4,7 +4,7 @@ import { withApollo, compose } from 'react-apollo';
 import { Redirect } from 'react-router-dom';
 import gql from 'graphql-tag';
 
-import { AUTH_PROFILE_ID } from '../authClient';
+const AUTH_PROFILE_ID = 'ck24rfib300dt01jrgiy465k6';
 
 const CURRENT_USER_QUERY = gql`
   query CurrentUser {
@@ -30,7 +30,7 @@ let Auth = ({ auth, client }) => {
   const [logging, setLogging] = useState(false);
 
   const login = async (email, password) => {
-    const token = await auth.authClient.login(email, password);
+    const token = await auth.authClient.authorize(email, password);
 
     const context = { headers: { authorization: `Bearer ${token}` } };
 
